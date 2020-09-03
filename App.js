@@ -41,8 +41,8 @@ const App = () => {
           )}
 
           <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>Learn More</Text>
-            <Text style={styles.sectionDescription}>Teste</Text>
+            <Text style={styles.sectionTitle}>Mudou o app</Text>
+            <Text style={styles.sectionDescription}>Marcos Você é foda 2</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -89,4 +89,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CodePush(App);
+const codePushOptions = {checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME};
+
+export default CodePush(codePushOptions)(App);
